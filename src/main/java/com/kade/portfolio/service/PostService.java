@@ -18,7 +18,7 @@ public class PostService {
 	public Post create(Post p) { return repo.save(p); }
 	public Post read(Long id) { return repo.findById(id).get(); }
 	public void delete(Long id) { repo.deleteById(id); }
-	public Post update(Long id, Post newPost) {
+	public Post update(Long id, Post newPost) { // 関数型インタフェースのラムダ式
 		return repo.findById(id)
 				.map(post -> {
 					post.setTitle(newPost.getTitle());
