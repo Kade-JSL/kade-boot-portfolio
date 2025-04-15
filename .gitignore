@@ -1,3 +1,9 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
 # === Eclipse ===
 .metadata/
 *.log
@@ -24,10 +30,14 @@ Thumbs.db
 *.war
 *.ear
 
-# === Maven / Gradle ===
-target/
-build/
-out/
+# === STS ===
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
 # === IntelliJ (if you ever switch IDEs) ===
 .idea/
@@ -44,6 +54,7 @@ logs/
 application.yml.backup
 application.properties.backup
 
+
 # === Secrets (VERY IMPORTANT) ===
 # NEVER COMMIT THESE — use .env or externalize config
 application.properties
@@ -55,7 +66,3 @@ credentials.json
 *.orig
 *.patch
 *.rej
-
-# === Node (if using frontend like React) ===
-node_modules/
-dist/
